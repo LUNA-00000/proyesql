@@ -4,8 +4,12 @@
 #include <string>
 
 using namespace std;
-
-// Clase que maneja la conexión a la base de datos MySQL
+/*Autor: Dana Hicely Estrada Martinez
+*fecha 06/06/2024
+*Clase:* conexionMySQL
+**Descripcion:**
+* Clase que maneja la conexión a la base de datos MySQL
+*/
 class ConexionMySQL {
 private:
     MYSQL* conexion;
