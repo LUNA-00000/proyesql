@@ -93,7 +93,7 @@ bool ConexionMySQL::abrir_conexion() {
         return false;
     }
     //SQL STRING
-    if (!mysql_real_connect(conexion, "localhost", "root", "root", "aerolinea", 3306, NULL, 0)) {
+    if (!mysql_real_connect(conexion, "localhost", "root", "Umg$2024", "aerolinea", 3306, NULL, 0)) {
         cout << "Error al conectar a la base de datos: " << mysql_error(conexion) << endl;
         return false;
     }
@@ -217,6 +217,7 @@ int main() {
     ControllerBoletos::conexion.abrir_conexion();
 
     do {
+            system("cls");
         cout << "Menu:" << endl;
         cout << "1. Crear boleto" << endl;
         cout << "2. Leer boleto" << endl;
@@ -256,6 +257,7 @@ int main() {
 
                     Boleto boleto(nombre_pasajero, fecha_salida, fecha_llegada, asiento, numero_vuelo);
                     ControllerBoletos::crear(boleto);
+                    system("pause");
                 }
                 break;
             case 2:
@@ -271,6 +273,7 @@ int main() {
                     } else {
                         cout << "No se encontró el boleto." << endl;
                     }
+                    system("pause");
                 }
                 break;
             case 3:
@@ -305,6 +308,7 @@ int main() {
                     } else {
                         cout << "No se encontró el boleto." << endl;
                     }
+                    system("pause");
                 }
                 break;
             case 4:
@@ -320,22 +324,26 @@ int main() {
                     } else {
                         cout << "No se encontro el boleto." << endl;
                     }
+                    system("pause");
                 }
                 break;
             case 5:
                 // Ver todos los boletos
                 ControllerBoletos::ver_todos();
+                system("pause");
                 break;
             case 6:
                 // Salir del programa
                 break;
             default:
                 cout << "Opción no válida. Intentelo de nuevo." << endl;
+                system("pause");
         }
     } while (opcion != 6);
 
     // Cerrar conexión a la base de datos
     ControllerBoletos::conexion.cerrar_conexion();
+    system("pause");
 
     return 0;
 }
