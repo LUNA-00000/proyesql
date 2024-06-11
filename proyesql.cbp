@@ -13,11 +13,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="C:/Program Files/MySQL/MySQL Server 8.0/include" />
+					<Add directory="C:/Program Files/MySQL/MySQL Server 8.4/include" />
 				</Compiler>
 				<Linker>
-					<Add library="C:/Program Files/MySQL/MySQL Server 8.0/lib/libmysql.lib" />
-					<Add directory="C:/Program Files/MySQL/MySQL Server 8.0/lib" />
+					<Add library="C:/Program Files/MySQL/MySQL Server 8.4/lib/libmysql.lib" />
+					<Add directory="C:/Program Files/MySQL/MySQL Server 8.4/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
